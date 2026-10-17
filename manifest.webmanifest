@@ -1,0 +1,14 @@
+{
+  "name": "Star Jar — little wishes for us",
+  "short_name": "Star Jar",
+  "description": "A jar of stars for Mena and Ammar — drop in a wish, then draw one out.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#090b20",
+  "theme_color": "#090b20",
+  "icons": [
+    { "src": "assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "assets/og-image.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

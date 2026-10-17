@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star Jar — little wishes for us</title>
+  <meta name="description" content="A jar of stars for Mena and Ammar — drop in a wish, then draw one out.">
+  <meta property="og:title" content="Star Jar — little wishes for us">
+  <meta property="og:description" content="A jar of stars for Mena and Ammar — drop in a wish, then draw one out.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#090b20">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="starjar">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-starmap/">Star map</a>
+      <a href="https://menaammarpro.github.io/love-memory-jar/">Memory jar</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Wishes, waiting softly</p>
+      <h1>A jar of <span>stars</span></h1>
+      <p class="subtitle">Drop in a wish whenever one comes to you. Draw one out when you miss me.</p>
+    </section>
+
+    <p id="sent-note" class="sent-note" hidden></p>
+
+    <section class="panel jar-panel">
+      <div class="jar" aria-hidden="true">
+        <div class="jar-lid"></div>
+        <div class="jar-body">
+          <div id="jar-stars" class="jar-stars"></div>
+        </div>
+      </div>
+      <p class="star-count"><span id="star-count">0</span> stars in the jar</p>
+    </section>
+
+    <section class="panel draw-panel">
+      <h2>Draw a star</h2>
+      <p>Close your eyes, pick one, and read it slowly.</p>
+      <button id="draw" class="button button-primary" type="button">Draw a star</button>
+      <div id="star-card" class="star-card" hidden>
+        <p id="star-text" class="star-text"></p>
+        <p id="star-date" class="star-date">&nbsp;</p>
+      </div>
+    </section>
+
+    <section class="panel add-panel">
+      <h2>Add a wish</h2>
+      <p>A hope, a plan, something you want for us &mdash; it becomes a new star.</p>
+      <label for="add-text">Your wish</label>
+      <textarea id="add-text" maxlength="180" rows="3" placeholder="I wish we could&hellip;"></textarea>
+      <button id="add" class="button button-primary" type="button">Put it in the jar</button>
+      <p id="add-msg" class="add-msg">&nbsp;</p>
+    </section>
+
+    <section class="panel share-panel">
+      <h2>Send the jar</h2>
+      <p>Give Ammar a nudge to open the jar and draw a star too.</p>
+      <button id="share" class="button button-primary" type="button">Copy a jar link</button>
+      <p id="note" class="share-note">&nbsp;</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* love-star-jar — page styles on top of the shared love theme */
+
+main {
+  width: min(1000px, calc(100% - 40px));
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  min-height: auto;
+  text-align: center;
+  padding: 2.4rem 1rem 0;
+}
+
+.eyebrow { color: var(--pink); }
+.hero h1 { margin: 0.2rem 0 0.4rem; }
+.subtitle { margin: 0; color: var(--muted); }
+
+.sent-note {
+  text-align: center;
+  background: rgba(255, 159, 207, 0.14);
+  border: 1px solid var(--pink-strong);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  margin: 0 auto;
+  max-width: 32rem;
+  color: var(--text);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.3rem 1.4rem;
+  box-shadow: var(--shadow);
+  max-width: 40rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.panel h2 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.panel p { color: var(--muted); margin: 0 0 0.8rem; }
+
+.jar-panel { text-align: center; }
+
+.jar {
+  width: 190px;
+  margin: 0 auto 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jar-lid {
+  width: 90px;
+  height: 16px;
+  border-radius: 6px 6px 3px 3px;
+  background: linear-gradient(180deg, var(--purple), var(--pink-strong));
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+.jar-body {
+  width: 170px;
+  height: 210px;
+  margin-top: -2px;
+  border-radius: 10px 10px 26px 26px;
+  border: 2px solid var(--line);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  box-shadow: inset 0 0 26px rgba(255, 114, 184, 0.12), var(--shadow);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 8px;
+}
+
+.jar-stars {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-content: flex-end;
+  justify-content: center;
+  gap: 3px;
+  width: 100%;
+}
+
+.jar-stars .star {
+  font-size: 0.85rem;
+  line-height: 1;
+  color: #ffe9a8;
+  text-shadow: 0 0 6px rgba(255, 233, 168, 0.8);
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.jar-stars .star.more { color: var(--muted); text-shadow: none; animation: none; }
+
+.star-count { color: var(--muted); margin: 0; }
+.star-count span { color: var(--text); font-weight: 700; }
+
+.draw-panel { text-align: center; }
+.draw-panel .button { margin: 0 auto; }
+
+.star-card {
+  margin: 1rem auto 0;
+  max-width: 30rem;
+  padding: 1.1rem 1.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--pink-strong);
+  background: rgba(255, 159, 207, 0.1);
+  box-shadow: 0 0 24px rgba(255, 114, 184, 0.2);
+}
+
+.star-text {
+  font-family: Georgia, "Iowan Old Style", serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 0.5rem;
+}
+
+.star-date { color: var(--muted); font-size: 0.8rem; margin: 0; }
+
+.add-panel label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.3rem; }
+
+.add-panel textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+.add-panel textarea:focus { outline: 2px solid var(--pink-strong); outline-offset: 1px; }
+.add-panel .button { margin-top: 0.6rem; }
+
+.add-msg { min-height: 1.2em; font-size: 0.85rem; color: var(--pink); margin: 0.7rem 0 0; }
+.share-note { min-height: 1.2em; font-size: 0.85rem; color: var(--muted); margin: 0.7rem 0 0; }
