@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE = "love-star-jar-v1";
+const CACHE = "love-star-jar-v2";
 const ASSETS = [
   ".",
   "index.html",
